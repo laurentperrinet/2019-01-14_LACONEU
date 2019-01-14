@@ -41,7 +41,7 @@ def spike_count_per_neuron(pop):
     return np.array([sc[i] for i in pop.all_cells])
 
 
-def histogram(pop, do_fit=False, fig=None, ax=None, 
+def histogram(pop, do_fit=False, fig=None, ax=None, alpha=1., 
               color='g', lw=1, label='tc_cells', simtime=None):
     if fig is None:
         fig, ax = plt.subplots(figsize = (12,8))
@@ -53,7 +53,8 @@ def histogram(pop, do_fit=False, fig=None, ax=None,
         spiketrains = pop.get_data().segments[0].spiketrains
         simtime = spiketrains[0].t_stop / ms
         
-    ax.plot(spike_count_per_neuron(pop)/simtime*1000., color=color, lw=lw)
+    ax.plot(spike_count_per_neuron(pop)/simtime*1000., color=color, lw=lw, alpha=alpha)
+    
     if do_fit:
         from lmfit import Model, Parameters
         mod = Model(tuning_function)
