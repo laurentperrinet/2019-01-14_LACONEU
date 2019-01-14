@@ -178,7 +178,7 @@ s.add_slide(content=s.content_figures(
         [os.path.join(figpath_talk, "brian-logo.png"),
          os.path.join(figpath_talk, "nest-initiative_logo.png"),
          os.path.join(figpath_talk, "pyNN_logo.png"),], bgcolor="black",
-        title=s.meta['title'], height=s.meta['height']*.6),
+        title=s.meta['title'], height=s.meta['height']*.4),
           notes="""
 
 """)
@@ -203,7 +203,7 @@ HH_firing.png
 """)
 
 s.add_slide(content=s.content_figures(
-        [os.path.join(figpath_talk, "HH_Models.png"),], bgcolor="black",
+        [os.path.join(figpath_talk, "HH_firing.png"),], bgcolor="black",
         title=None, height=s.meta['height']*.8),
           notes="""
 # ownCNRS/2019-01_LACONEU/2019-01-14_LACONEU/tmp/4-HH Models.ipynb
@@ -337,7 +337,7 @@ if slides_filename is None:
  When:: {DD}/{MM}/{YYYY}
  Where:: {location}
  Slides:: http://blog.invibe.net/files/{tag}.html
-
+ Code:: https://github.com/laurentperrinet/{tag}/
 == reference ==
 {{{{{{
 #!bibtex
