@@ -1,4 +1,4 @@
-default: show
+default: html
 
 SRC=2019-01-14_LACONEU
 
@@ -15,7 +15,7 @@ page:
 
 show: html
 #	open -a firefox $(SRC).html
-	open /Applications/Safari.app/Contents/MacOS/Safari $(SRC).html
+	open $(SRC).html
 
 blog: html
 	cp $(SRC).html  ~/pool/blog/invibe/files

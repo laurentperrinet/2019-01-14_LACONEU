@@ -171,6 +171,18 @@ s.add_slide(content=intro,
 
 """)
 
+# https://brian2.readthedocs.io/en/stable/_static/brian-logo.png
+# http://www.nest-initiative.org/wp-content/uploads/2015/03/nest-initiative_logo.png
+# http://neuralensemble.org/docs/PyNN/0.7/_static/pyNN_logo.png
+s.add_slide(content=s.content_figures(
+        [os.path.join(figpath_talk, "brian-logo.png"),
+         os.path.join(figpath_talk, "nest-initiative_logo.png"),
+         os.path.join(figpath_talk, "pyNN_logo.png"),], bgcolor="black",
+        title=s.meta['title'], height=s.meta['height']*.6),
+          notes="""
+
+""")
+
 i_section += 1
 #################################################################################
 ## 🏄🏄🏄🏄🏄🏄🏄🏄 Single cells - 15''  🏄🏄🏄🏄🏄🏄🏄🏄
