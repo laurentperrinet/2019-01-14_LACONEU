@@ -212,6 +212,15 @@ HH_firing.png
 """)
 
 s.add_slide(content=s.content_figures(
+        [os.path.join(figpath_talk, "IF_cond_exp.png"),], bgcolor="black",
+        title=None, height=s.meta['height']*.8),
+          notes="""
+
+# http://neuralensemble.org/docs/PyNN/0.7/_images/IF_cond_exp.png
+
+""")
+
+s.add_slide(content=s.content_figures(
         [os.path.join(figpath_talk, "izhik.png"),], bgcolor="black",
         title=None, height=s.meta['height']*.8),
           notes="""
@@ -219,7 +228,6 @@ s.add_slide(content=s.content_figures(
 # https://www.izhikevich.org/publications/izhik.png
 
 """)
-
 
 s.add_slide(content=s.content_figures(
         [os.path.join(figpath_talk, "hugoladret_InternshipM2_CUBA.png"),], bgcolor="black",
