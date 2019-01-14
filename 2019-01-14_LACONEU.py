@@ -182,6 +182,7 @@ s.add_slide(content=s.content_figures(
           notes="""
 
 """)
+s.close_section()
 
 i_section += 1
 #################################################################################
@@ -192,6 +193,35 @@ s.open_section()
 title = meta['sections'][i_section-1]
 s.add_slide_outline(i_section-1)
 
+s.add_slide(content=s.content_figures(
+        [os.path.join(figpath_talk, "HH_Models.png"),], bgcolor="black",
+        title=title, height=s.meta['height']*.6),
+          notes="""
+# ownCNRS/2019-01_LACONEU/2019-01-14_LACONEU/tmp/4-HH Models.ipynb
+
+""")
+
+
+s.add_slide(content=s.content_figures(
+        [os.path.join(figpath_talk, "izhik.png"),], bgcolor="black",
+        title=title, height=s.meta['height']*.6),
+          notes="""
+
+# https://www.izhikevich.org/publications/izhik.png
+
+""")
+
+
+s.add_slide(content=s.content_figures(
+        [os.path.join(figpath_talk, "hugoladret_InternshipM2_CUBA.png"),], bgcolor="black",
+        title=title, height=s.meta['height']*.6),
+          notes="""
+
+# https://github.com/hugoladret/InternshipM2/blob/master/FINAL_Retina_LGN_generation.ipynb
+
+""")
+
+
 s.close_section()
 
 i_section += 1
@@ -203,19 +233,59 @@ i_section += 1
 s.open_section()
 title = meta['sections'][i_section-1]
 s.add_slide_outline(i_section-1)
+s.add_slide(content=s.content_figures(
+        [os.path.join(figpath_talk, "Fig_ring_model.png"),], bgcolor="black",
+        title=title, height=s.meta['height']*.6),
+          notes="""
+
+# /Volumes/data/2018_backup/archives/2018_science/2018_HL_M1/figs/Fig_ring_model.pdf
+#
+
+""")
+
+
+for figname in [ 'Brunel200Fig1.png', 'Brunel200Fig2.png']:
+    s.add_slide(content=s.content_figures(
+        [os.path.join(figpath_talk, figname),], bgcolor="black",
+        title=title, height=s.meta['height']*.6),
+          notes="""
+
+
+# https://sci-hub.tw/https://doi.org/10.1016/S0925-2312(00)00179-X
+
+""")
 
 s.close_section()
 
 i_section += 1
 #################################################################################
-## 🏄🏄🏄🏄🏄🏄🏄🏄 Populations of cells - 15''  🏄🏄🏄🏄🏄🏄🏄🏄
+## 🏄🏄🏄🏄🏄🏄🏄🏄 STDP - 15''  🏄🏄🏄🏄🏄🏄🏄🏄
 #################################################################################
 #################################################################################
 
 s.open_section()
 title = meta['sections'][i_section-1]
 s.add_slide_outline(i_section-1)
+s.add_slide(content=s.content_figures(
+        [os.path.join(figpath_talk, "fig_sup_stdps.png"),], bgcolor="black",
+        title=title, height=s.meta['height']*.6),
+          notes="""
 
+#  /Users/laurentperrinet/nextcloud/RTC/2019-01-11\ rapport\ M2A\ HL\ 5bf69490a5705a15960895d6/Figures/fig_sup_stdps.pdf
+
+""")
+
+s.add_slide(content=s.content_figures(
+        [os.path.join(figpath_talk, "hugoladret_InternshipM2_FINAL_1_couche.png"),], bgcolor="black",
+        title=s.meta['title'], height=s.meta['height']*.6),
+          notes="""
+
+# https://github.com/hugoladret/InternshipM2/blob/master/FINAL_1_couche.ipynb
+
+""")
+
+
+# FINAL_L2_noshift.pdf
 s.close_section()
 
 #################################################################################
