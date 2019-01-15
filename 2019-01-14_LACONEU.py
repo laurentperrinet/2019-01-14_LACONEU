@@ -48,12 +48,9 @@ meta = dict(
  # width= 1280, #1600,
  # height= 1024, #1000,
  margin= 0.1618,#
- #  reveal_path = 'file://' + home + '/nextcloud/libs/slides.py/reveal.js/',
-            # reveal_path = 'http://cdn.jsdelivr.net/reveal.js/3.0.0/',
- #reveal_path = 'https://s3.amazonaws.com/hakim-static/reveal-js/',
- #reveal_path = 'http://cdn.jsdelivr.net/reveal.js/3.0.0/',
- #reveal_path = 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.4.1/',
- reveal_path = 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/',
+ #reveal_path = 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/',
+ #reveal_path='http://cdn.jsdelivr.net/reveal.js/3.7.0/',
+ reveal_path='https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/',
  #theme='night',
  #theme='sky',
  #theme='black',
@@ -106,12 +103,12 @@ if not os.path.isfile(figname):
 print(meta['sections'])
 s = Slides(meta)
 
-#################################################################################
+###############################################################################
 ## 🏄🏄🏄🏄🏄🏄🏄🏄 intro  🏄🏄🏄🏄🏄🏄🏄🏄
-#################################################################################
+###############################################################################
 i_section = 0
 s.open_section()
-#################################################################################
+###############################################################################
 
 s.hide_slide(content=s.content_figures(
     #[os.path.join(figpath_talk, 'qr.png')], bgcolor="black",
@@ -177,7 +174,7 @@ s.add_slide(content=intro,
 s.add_slide(content=s.content_figures(
         [os.path.join(figpath_talk, "brian-logo.png"),
          os.path.join(figpath_talk, "nest-initiative_logo.png"),
-         os.path.join(figpath_talk, "pyNN_logo.png"),], bgcolor="black",
+         os.path.join(figpath_talk, "pyNN_logo.png"), ], bgcolor="black",
         title=s.meta['title'], height=s.meta['height']*.4),
           notes="""
 
@@ -185,16 +182,16 @@ s.add_slide(content=s.content_figures(
 s.close_section()
 
 i_section += 1
-#################################################################################
+###############################################################################
 ## 🏄🏄🏄🏄🏄🏄🏄🏄 Single cells - 15''  🏄🏄🏄🏄🏄🏄🏄🏄
-#################################################################################
-#################################################################################
+###############################################################################
+###############################################################################
 s.open_section()
 title = meta['sections'][i_section]
 s.add_slide_outline(i_section)
 
 s.add_slide(content=s.content_figures(
-        [os.path.join(figpath_talk, "HH_Models.png"),], bgcolor="black",
+        [os.path.join(figpath_talk, "HH_Models.png"), ], bgcolor="black",
         title=None, height=s.meta['height']*.8),
           notes="""
 # ownCNRS/2019-01_LACONEU/2019-01-14_LACONEU/tmp/4-HH Models.ipynb
@@ -203,7 +200,7 @@ HH_firing.png
 """)
 
 s.add_slide(content=s.content_figures(
-        [os.path.join(figpath_talk, "HH_firing.png"),], bgcolor="black",
+        [os.path.join(figpath_talk, "HH_firing.png"), ], bgcolor="black",
         title=None, height=s.meta['height']*.8),
           notes="""
 # ownCNRS/2019-01_LACONEU/2019-01-14_LACONEU/tmp/4-HH Models.ipynb
@@ -212,7 +209,7 @@ HH_firing.png
 """)
 
 s.add_slide(content=s.content_figures(
-        [os.path.join(figpath_talk, "IF_cond_exp.png"),], bgcolor="black",
+        [os.path.join(figpath_talk, "IF_cond_exp.png"), ], bgcolor="black",
         title=None, height=s.meta['height']*.8),
           notes="""
 
@@ -221,7 +218,7 @@ s.add_slide(content=s.content_figures(
 """)
 
 s.add_slide(content=s.content_figures(
-        [os.path.join(figpath_talk, "izhik.png"),], bgcolor="black",
+        [os.path.join(figpath_talk, "izhik.png"), ], bgcolor="black",
         title=None, height=s.meta['height']*.8),
           notes="""
 
@@ -230,7 +227,7 @@ s.add_slide(content=s.content_figures(
 """)
 
 s.add_slide(content=s.content_figures(
-        [os.path.join(figpath_talk, "hugoladret_InternshipM2_CUBA.png"),], bgcolor="black",
+        [os.path.join(figpath_talk, "hugoladret_InternshipM2_CUBA.png"), ], bgcolor="black",
         title=None, height=s.meta['height']*.8),
           notes="""
 
@@ -242,16 +239,16 @@ s.add_slide(content=s.content_figures(
 s.close_section()
 
 i_section += 1
-#################################################################################
-## 🏄🏄🏄🏄🏄🏄🏄🏄 Populations of cells - 15''  🏄🏄🏄🏄🏄🏄🏄🏄
-#################################################################################
-#################################################################################
+###############################################################################
+# 🏄🏄🏄🏄🏄🏄🏄🏄         Populations of cells - 15''              🏄🏄🏄🏄🏄🏄🏄🏄
+###############################################################################
+###############################################################################
 
 s.open_section()
 title = meta['sections'][i_section]
 s.add_slide_outline(i_section)
 s.add_slide(content=s.content_figures(
-        [os.path.join(figpath_talk, "Fig_ring_model.png"),], bgcolor="black",
+        [os.path.join(figpath_talk, "Fig_ring_model.png"), ], bgcolor="black",
         title=None, height=s.meta['height']*.8),
           notes="""
 
@@ -261,9 +258,9 @@ s.add_slide(content=s.content_figures(
 """)
 
 
-for figname in [ 'Brunel200Fig1.png', 'Brunel200Fig2.png']:
+for figname in ['Brunel200Fig1.png', 'Brunel200Fig2.png']:
     s.add_slide(content=s.content_figures(
-        [os.path.join(figpath_talk, figname),], bgcolor="black",
+        [os.path.join(figpath_talk, figname), ], bgcolor="black",
         title=None, height=s.meta['height']*.8),
           notes="""
 
@@ -275,16 +272,16 @@ for figname in [ 'Brunel200Fig1.png', 'Brunel200Fig2.png']:
 s.close_section()
 
 i_section += 1
-#################################################################################
+###############################################################################
 ## 🏄🏄🏄🏄🏄🏄🏄🏄 STDP - 15''  🏄🏄🏄🏄🏄🏄🏄🏄
-#################################################################################
-#################################################################################
+###############################################################################
+###############################################################################
 
 s.open_section()
 title = meta['sections'][i_section]
 s.add_slide_outline(i_section)
 s.add_slide(content=s.content_figures(
-        [os.path.join(figpath_talk, "fig_sup_stdps.png"),], bgcolor="black",
+        [os.path.join(figpath_talk, "fig_sup_stdps.png"), ], bgcolor="black",
         title=None, height=s.meta['height']*.8),
           notes="""
 
@@ -293,7 +290,7 @@ s.add_slide(content=s.content_figures(
 """)
 
 s.add_slide(content=s.content_figures(
-        [os.path.join(figpath_talk, "hugoladret_InternshipM2_FINAL_1_couche.png"),], bgcolor="black",
+        [os.path.join(figpath_talk, "hugoladret_InternshipM2_FINAL_1_couche.png"), ], bgcolor="black",
         title=None, height=s.meta['height']*.8),
           notes="""
 
@@ -305,10 +302,10 @@ s.add_slide(content=s.content_figures(
 # FINAL_L2_noshift.pdf
 s.close_section()
 
-#################################################################################
+###############################################################################
 ## 🏄🏄🏄🏄🏄🏄🏄🏄 OUTRO - 5''  🏄🏄🏄🏄🏄🏄🏄🏄
-#################################################################################
-#################################################################################
+###############################################################################
+###############################################################################
 s.open_section()
 s.add_slide(content=intro,
     notes="""
