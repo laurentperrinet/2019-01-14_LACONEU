@@ -10,17 +10,6 @@ import os
 home = os.environ['HOME']
 figpath_talk = 'figures'
 figpath_slides = os.path.join(home, 'nextcloud/libs/slides.py/figures/')
-# figpath_etienne = os.path.join(home, 'pool/EtienneRey')
-# figpath_sparse = os.path.join(home, 'pool/science/Perrinet2015BICV_sparse/figures')
-# figpath_bednar = os.path.join(home, 'pool/science/PerrinetBednar15/talk')
-# figpath_bednar2 = os.path.join(home, 'pool/science/PerrinetBednar15/figures')
-# figpath_méjanes = os.path.join(home, 'pool/blog/invibe/output/files/2016-04-28_méjanes/figures')
-# figpath_FLE = os.path.join(home, 'ownCNRS/2018-03-26_cours-NeuroComp_FEP/figures')
-#
-# images_etienne = [         '2016_elasticite/photos/E-REY-TRAME_Elasticité-Vasarely.JPG',
-#          '2018_TRAMES/files/2017-10-03_instabilité_N_pix=9449-R_dis=1.50-theta=29.00 deg-freq_A=0.07-R_dis_A=1.50-freq_B=0.03-R_dis_B=1.51-seuil_A=0.70-seuil_B=0.75-gain=10.00_render.png',
-#          '2013_Tropique/photos/EtienneRey-Tropique-2011-C.JPG',
-# ]
 import sys
 print(sys.argv)
 tag = sys.argv[0].split('.')[0]
@@ -45,11 +34,7 @@ meta = dict(
  draft = DEBUG, # show notes etc
  width= 1600,
  height= 1000,
- # width= 1280, #1600,
- # height= 1024, #1000,
  margin= 0.1618,#
- #reveal_path = 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/',
- #reveal_path='http://cdn.jsdelivr.net/reveal.js/3.7.0/',
  reveal_path='https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/',
  #theme='night',
  #theme='sky',
@@ -59,7 +44,6 @@ meta = dict(
  #theme='White',
  bgcolor = "white",
  author='Laurent Perrinet, INT',
- #author_link='Chloé Pasturel, Laurent Perrinet and Anna Montagnini',
  author_link='<a href="http://invibe.net">Laurent Perrinet</a>',
  short_title='Modelling spiking neural networks using Brian, Nest and pyNN',
  title='Modelling spiking neural networks using Brian, Nest and pyNN',
@@ -111,10 +95,8 @@ s.open_section()
 ###############################################################################
 
 s.hide_slide(content=s.content_figures(
-    #[os.path.join(figpath_talk, 'qr.png')], bgcolor="black",
     [os.path.join(figpath_slides, 'mire.png')], bgcolor=meta['bgcolor'],
     height=s.meta['height']*.90),
-    #image_fname=os.path.join(figpath_aSPEM, 'mire.png'),
     notes="""
 Check-list:
 -----------
@@ -133,20 +115,10 @@ intro = """
 <h2 class="title">{title}</h2>
 <h3>{author_link}</h3>
 """.format(**meta)
-# intro += s.content_figures(
-# [os.path.join(figpath_aSPEM, "troislogos.png")], bgcolor="black",
-# height=s.meta['height']*.2, width=s.meta['height']*.75)
 intro += s.content_imagelet(os.path.join(figpath_slides, "troislogos.png"), s.meta['height']*.2) #bgcolor="black",
-#intro += s.content_imagelet(os.path.join(figpath_talk, 'qr.png'), s.meta['height']*.2) #bgcolor="black",
-# height=s.meta['height']*.2, width=s.meta['height']*.2)
-#
 intro += """
 <h4><a href="{conference_url}">{conference}</a>, {DD}/{MM}/{YYYY} </h4>
 """.format(**meta)
-# intro += """
-# <h4><a href="{conference_url}">{conference}</a>, {DD}/{MM}/{YYYY} </h4>
-# {Acknowledgements}
-# """.format(**meta)
 
 s.add_slide(content=intro,
         notes="""
