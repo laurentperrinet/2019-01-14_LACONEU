@@ -300,7 +300,7 @@ if slides_filename is None:
  Where:: {location}
  Slides:: https://laurentperrinet.github.io/{tag}
  Code:: https://github.com/laurentperrinet/{tag}/
- 
+
 == reference ==
 {{{{{{
 #!bibtex
