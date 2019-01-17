@@ -44,7 +44,7 @@ meta = dict(
  #theme='White',
  bgcolor = "white",
  author='Laurent Perrinet, INT',
- author_link='<a href="http://invibe.net">Laurent Perrinet</a>',
+ author_link='<a href="https://laurentperrinet.github.io">Laurent Perrinet</a>',
  short_title='Modelling spiking neural networks using Brian, Nest and pyNN',
  title='Modelling spiking neural networks using Brian, Nest and pyNN',
  conference_url='http://www.laconeu.cl',
@@ -55,7 +55,7 @@ meta = dict(
  MM = MM,
  DD = DD,
  tag = tag,
- url = 'http://invibe.net/LaurentPerrinet/Presentations/' + tag,
+ url=f'https://laurentperrinet.github.io/{tag}',
  abstract="""
 """,
 wiki_extras="""
@@ -294,19 +294,13 @@ if slides_filename is None:
 
 = {title}  =
 
- Quoi:: [[{conference_url}|{conference}]]
- Qui:: {author}
- Quand:: {DD}/{MM}/{YYYY}
- Où:: {location}
- Support visuel:: http://blog.invibe.net/files/{tag}.html
-
-
  What:: talk @ the [[{conference_url}|{conference}]]
  Who:: {author}
  When:: {DD}/{MM}/{YYYY}
  Where:: {location}
- Slides:: http://blog.invibe.net/files/{tag}.html
+ Slides:: https://laurentperrinet.github.io/{tag}
  Code:: https://github.com/laurentperrinet/{tag}/
+ 
 == reference ==
 {{{{{{
 #!bibtex
